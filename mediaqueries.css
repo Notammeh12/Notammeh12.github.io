@@ -1,18 +1,4 @@
 @media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
-
-    #hamburger-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    nav {
-        position: static;
-    }
-
     #profile,
     .section-container {
         flex-direction: column;
@@ -60,6 +46,14 @@
 
     .section__text {
         max-width: 100%;
+    }
+
+    .quote-card {
+        padding: 1.15rem 1.2rem;
+    }
+
+    .quote-card blockquote {
+        font-size: 0.94rem;
     }
 }
 

@@ -1,272 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Rodriguez | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Emmanuel Rodriguez</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#profile">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Emmanuel Rodriguez</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#activities" onclick="toggleMenu()">Activities</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <meta name="description" content="Portfolio site for Emmanuel Rodriguez, a Computer Science student at UTEP focused on software engineering, cybersecurity, and data driven systems." />
+  <meta property="og:title" content="Emmanuel Rodriguez | Portfolio" />
+  <meta property="og:description" content="Computer Science @ UTEP. Software engineering + cybersecurity + data systems. Projects, experience, and technical skills." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f97316" />
+
+  <title>Emmanuel Rodriguez | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav id="desktop-nav" aria-label="Primary">
+    <div class="logo">Emmanuel Rodriguez</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#profile">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ai-observation">AI Note</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav" aria-label="Mobile">
+    <div class="logo">Emmanuel Rodriguez</div>
+    <div class="hamburger-menu">
+      <button class="hamburger-icon" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu-links" id="mobile-menu">
+        <li><a href="#profile">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ai-observation">AI Note</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
     <section id="profile">
-        <div class="section__pic-container profile-pic-frame">
-            <img src="./assets/profile-pic.png" alt="Emmanuel Rodriguez profile pic">
+      <div class="section__pic-container profile-pic-frame">
+        <img
+          src="./assets/profile-pic.png"
+          alt="Emmanuel Rodriguez profile pic"
+          width="320"
+          height="320"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Software Engineering | Cybersecurity | Data Systems</p>
+        <h1 class="title">Emmanuel Rodriguez</h1>
+        <p class="section__text__p2">Computer Science @ UTEP · Class of 2026</p>
+
+        <p class="lead">
+          I build reliable software and data driven solutions with a focus on clarity, performance, and security. My experience includes
+          Python, Java, SQL, and modern web technologies.
+        </p>
+
+        <div class="btn-container">
+          <a class="btn btn-color-2" href="./assets/resume-example.pdf" target="_blank" rel="noopener noreferrer">
+            Download CV
+          </a>
+          <a class="btn btn-color-1" href="#contact">
+            Contact Info
+          </a>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Data analyst in the making</p>
-            <h1 class="title">Emmanuel Rodriguez</h1>
-            <p class="section__text__p2">Computer Science @ UTEP · Class of 2026</p>
-            <p class="lead">
-                I turn data into actionable insights with Python, SQL, Excel, and Google App Script while supporting teams across networking, merchandising, and product planning.
-            </p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/emmardz12'">
-                <img src="./assets/github.png" alt="Github profile" class="icon" onclick="location.href='https://github.com/Notammeh'">
-            </div>
-            <div class="quick-facts">
-                <div>
-                    <p class="fact-label">Location</p>
-                    <p>El Paso, TX</p>
-                </div>
-                <div>
-                    <p class="fact-label">Interests</p>
-                    <p>Data · Cybersecurity · Networks</p>
-                </div>
-                <div>
-                    <p class="fact-label">Currently</p>
-                    <p>Building better insights & tools</p>
-                </div>
-            </div>
+
+        <div id="socials-container">
+          <a class="social-link" href="https://www.linkedin.com/in/emmardz12" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <img src="./assets/linkedin.png" alt="" class="icon" />
+          </a>
+          <a class="social-link" href="https://github.com/Notammeh" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <img src="./assets/github.png" alt="" class="icon" />
+          </a>
         </div>
+
+        <div class="quick-facts">
+          <div>
+            <p class="fact-label">Location</p>
+            <p>El Paso, TX</p>
+          </div>
+          <div>
+            <p class="fact-label">Focus</p>
+            <p>Software · Cybersecurity · Data</p>
+          </div>
+          <div>
+            <p class="fact-label">Currently</p>
+            <p>Building practical, reliable solutions</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about">
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container about-pic-wrapper">
-                <img src="./assets/about-pic.png" alt="profile picture" class="about-pic">
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <h3>Career Objective</h3>
-                        <p>
-                            Computer Science student seeking a data analyst internship where I can pair analytical thinking with strong technical foundations to influence business decisions.
-                        </p>
-                    </div>
-                    <div class="details-container">
-                        <h3>What drives me</h3>
-                        <p>
-                            I love solving ambiguous problems, designing inclusive solutions, and collaborating across teams. Whether automating reports or improving accessibility, I bring curiosity and follow-through.
-                        </p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        At the University of Texas at El Paso, I balance coursework in algorithms, networks, and data structures with hands-on experiences that keep me close to real users. My toolkit spans Java, Python, SQL, Excel, and Google App Script, and I am fluent in both English and Spanish helping me bridge communication gaps and keep teams aligned.
-                    </p>
-                </div>
-            </div>
+      <p class="section__text__p1">Get to know more</p>
+      <h1 class="title">About Me</h1>
+
+      <div class="section-container">
+        <div class="section__pic-container about-pic-wrapper">
+          <img src="./assets/about-pic.png" alt="Emmanuel Rodriguez speaking outdoors" class="about-pic" loading="lazy" decoding="async" />
         </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h3>Career Objective</h3>
+              <p>
+                Computer Science student pursuing software engineering opportunities to build dependable systems and deliver measurable business value.
+              </p>
+            </div>
+
+            <div class="details-container">
+              <h3>What drives me</h3>
+              <p>
+                I value structured problem solving, clear communication, and thoughtful execution from initial design through delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p>
+              I am a Computer Science student at the University of Texas at El Paso focused on software engineering, data systems, and cybersecurity.
+              My coursework includes operating systems, computer networks, algorithms, and database systems, and my projects span full stack and embedded development.
+              <br /><br />
+              I approach work with discipline and consistency, from architecture decisions to implementation details.
+              I also communicate effectively in both English and Spanish, helping keep cross functional teams aligned.
+            </p>
+
+            <div class="tag-grid" style="margin-top: 14px;">
+              <span>Cybersecurity</span>
+              <span>System Architecture</span>
+              <span>Data Systems</span>
+              <span>Networks</span>
+              <span>Full Stack</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="experience">
-        <p class="section__text__p1">Explore my</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="experience-card">
-                <div class="card-header">
-                    <p class="eyebrow">Summer 2025</p>
-                    <h3>JD Corporate Academy Internship</h3>
-                </div>
-                <ul>
-                    <li>Cut manual ticketing errors by 80% by building a Google Sheets App Script extension that automated entry.</li>
-                    <li>Analyzed product sales and order data in Excel to deliver reports that guided planning and buying strategies.</li>
-                    <li>Replaced an uninterruptable power supply to prevent data loss and minimize downtime while troubleshooting network links.</li>
-                    <li>Partnered with software engineers to diagnose and resolve errors impacting the Merchandising Department.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <div class="card-header">
-                    <p class="eyebrow">Spring 2024</p>
-                    <h3>Engineering Innovation & Leadership</h3>
-                </div>
-                <ul>
-                    <li>Designed inclusive bus seating solutions that improved accessibility for wheelchair users.</li>
-                    <li>Led team-based project management efforts, translating research into actionable engineering recommendations.</li>
-                </ul>
-            </div>
+      <p class="section__text__p1">Explore my</p>
+      <h1 class="title">Experience</h1>
+
+      <div class="experience-details-container">
+        <div class="experience-card">
+          <div class="card-header">
+            <p class="eyebrow">Summer 2025</p>
+            <h3>JD Corporate Academy Internship</h3>
+          </div>
+          <ul>
+            <li>Reduced manual ticketing errors by automating data entry via Google Apps Script and structured Google Sheets workflows.</li>
+            <li>Analyzed product sales and order data in Excel to produce reports that supported planning and buying decisions.</li>
+            <li>Resolved operational issues by troubleshooting network links and replacing a UPS to prevent downtime and data loss.</li>
+            <li>Partnered with software engineers to diagnose and address errors impacting internal merchandising workflows.</li>
+          </ul>
         </div>
+
+        <div class="experience-card">
+          <div class="card-header">
+            <p class="eyebrow">Spring 2024</p>
+            <h3>Engineering Innovation & Leadership</h3>
+          </div>
+          <ul>
+            <li>Designed accessibility focused solutions for public transit seating to better support wheelchair users.</li>
+            <li>Led team based project planning and turned research into actionable engineering recommendations.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="education">
-        <p class="section__text__p1">Academic track</p>
-        <h1 class="title">Education</h1>
-        <div class="education-card">
-            <div class="card-header">
-                <p class="eyebrow">El Paso, TX</p>
-                <h3>The University of Texas at El Paso</h3>
-            </div>
-            <p class="degree">Bachelor of Science in Computer Science · Anticipated Graduation: May 2026</p>
-            <p class="honors">Honors: College of Engineering Dean’s List (Fall 2021, Spring 2022, Fall 2022, Fall 2024)</p>
-            <div class="tag-grid">
-                <span>Computer Organization</span>
-                <span>Data Structures</span>
-                <span>Foundations of Programming</span>
-                <span>Algorithms & Analysis</span>
-                <span>Computer Networks</span>
-            </div>
+      <p class="section__text__p1">Academic track</p>
+      <h1 class="title">Education</h1>
+
+      <div class="education-card">
+        <div class="card-header">
+          <p class="eyebrow">El Paso, TX</p>
+          <h3>The University of Texas at El Paso</h3>
         </div>
+
+        <p class="degree">Bachelor of Science in Computer Science · Anticipated Graduation: May 2026</p>
+        <p class="honors">Honors: College of Engineering Dean’s List (Fall 2021, Spring 2022, Fall 2022, Fall 2024)</p>
+
+        <div class="tag-grid">
+          <span>Operating Systems</span>
+          <span>Computer Networks</span>
+          <span>Data Structures</span>
+          <span>Algorithms</span>
+          <span>Database Systems</span>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
-        <p class="section__text__p1">Things I build</p>
-        <h1 class="title">Projects & Programs</h1>
-        <div class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <p class="eyebrow">Current</p>
-                    <h3>Cybersecurity Course</h3>
-                </div>
-                <p>Hands-on labs covering threat detection, cryptography, and incident response with Python, Linux, and SQL.</p>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <p class="eyebrow">Current</p>
-                    <h3>Personal Portfolio</h3>
-                </div>
-                <p>Responsive HTML, CSS, and JavaScript site (yes, this one!) for showcasing technical milestones and experiments.</p>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <p class="eyebrow">May 2024</p>
-                    <h3>Chess Game · Java Swing</h3>
-                </div>
-                <p>Custom chess application with GUI that reinforced object-oriented design patterns and event-driven programming.</p>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <p class="eyebrow">April 2025</p>
-                    <h3>Photoshop · Python</h3>
-                </div>
-                <p>Image editing toolkit storing pixels as 2D arrays to blur, recolor, invert, and zoom via algorithmic filters.</p>
-            </article>
-        </div>
+      <p class="section__text__p1">Things I build</p>
+      <h1 class="title">Projects & Programs</h1>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">Current</p>
+            <h3>PromptStrike · AI Security Testing Platform</h3>
+          </div>
+          <p>
+            Security testing platform for evaluating vulnerabilities in language model interactions, with emphasis on prompt injection analysis and risk focused system design.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">Current</p>
+            <h3>Airline Booking System · Full Stack</h3>
+          </div>
+          <p>
+            Full stack reservation system that models real booking workflows with modular domain logic for flights, passengers, bookings, and loyalty accounts.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">Fall 2024</p>
+            <h3>Embedded Stopwatch · MSP430</h3>
+          </div>
+          <p>
+            Embedded stopwatch built on MSP430 using timer interrupts, hardware button controls, LED state indicators, and real time display updates in C.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">Current</p>
+            <h3>Cybersecurity Coursework · Labs</h3>
+          </div>
+          <p>
+            Applied coursework covering threat modeling, networking fundamentals, and secure programming practices using Linux, Python, and SQL.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">May 2024</p>
+            <h3>Chess Game · Java Swing</h3>
+          </div>
+          <p>
+            Java Swing chess application focused on object oriented design, event driven behavior, and maintainable game state modeling.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">April 2025</p>
+            <h3>Photoshop · Python</h3>
+          </div>
+          <p>
+            Python based image editor using two dimensional pixel arrays for blur, recolor, invert, and zoom operations.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <p class="eyebrow">Ongoing</p>
+            <h3>Personal Portfolio</h3>
+          </div>
+          <p>
+            Responsive portfolio site built with HTML, CSS, and JavaScript, designed for accessibility, performance, and clear professional presentation.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section id="skills">
-        <p class="section__text__p1">What I use</p>
-        <h1 class="title">Skills & Tools</h1>
-        <div class="skills-grid">
-            <div class="skills-card">
-                <h3>Languages & Tools</h3>
-                <div class="tag-grid">
-                    <span>Java</span>
-                    <span>Python</span>
-                    <span>JavaScript</span>
-                    <span>Google App Script</span>
-                    <span>SQL</span>
-                    <span>Excel</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>C</span>
-                    <span>Linux</span>
-                    <span>Git</span>
-                </div>
-            </div>
-            <div class="skills-card">
-                <h3>Languages</h3>
-                <ul>
-                    <li>Native Spanish speaker</li>
-                    <li>English (fluent)</li>
-                </ul>
-            </div>
+      <p class="section__text__p1">What I use</p>
+      <h1 class="title">Skills & Tools</h1>
+
+      <div class="skills-grid">
+        <div class="skills-card">
+          <h3>Programming</h3>
+          <div class="tag-grid">
+            <span>Java</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>C</span>
+            <span>SQL</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
         </div>
+
+        <div class="skills-card">
+          <h3>Technologies</h3>
+          <div class="tag-grid">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Linux</span>
+            <span>Node.js</span>
+            <span>Webpack</span>
+            <span>Firebase</span>
+            <span>Firestore</span>
+            <span>Excel</span>
+            <span>Google Apps Script</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <h3>Concepts</h3>
+          <div class="tag-grid">
+            <span>System Design</span>
+            <span>OOP</span>
+            <span>Debugging</span>
+            <span>Data Analysis</span>
+            <span>Computer Networks</span>
+            <span>Operating Systems</span>
+            <span>Secure Design</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <h3>Languages</h3>
+          <ul>
+            <li>Spanish (native)</li>
+            <li>English (fluent)</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="activities">
-        <p class="section__text__p1">Beyond the classroom</p>
-        <h1 class="title">Leadership & Communities</h1>
-        <div class="activities-grid">
-            <article class="activity-card">
-                <h3>Coding Interview Club</h3>
-                <p>Solve interview problems with peers, present whiteboard solutions, and trade strategies during bi-weekly meetups.</p>
-            </article>
-            <article class="activity-card">
-                <h3>Google Developer Club</h3>
-                <p>Attend workshops, collaborate on hack-style projects, and grow a network of developers passionate about building for users.</p>
-            </article>
-        </div>
+      <p class="section__text__p1">Beyond the classroom</p>
+      <h1 class="title">Leadership & Communities</h1>
+
+      <div class="activities-grid">
+        <article class="activity-card">
+          <h3>JD Sports · Floor Manager</h3>
+          <p>
+            Oversee daily store operations, team coordination, and service standards. Improved ticket processing workflows using my computer science background, reducing input time by 75%.
+          </p>
+        </article>
+
+        <article class="activity-card">
+          <h3>Coding Interview Club</h3>
+          <p>Solve interview problems with peers, present solutions, and trade strategies during biweekly meetups.</p>
+        </article>
+
+        <article class="activity-card">
+          <h3>Google Developer Club</h3>
+          <p>Attend workshops, collaborate on projects, and grow a network of developers focused on building useful products.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ai-observation" class="quote-section">
+      <p class="section__text__p1">Professional perspective</p>
+      <h1 class="title">What My AI Debugging Partner Says About Me</h1>
+
+      <article class="quote-card">
+        <p class="quote-label">AI Debugging Partner</p>
+        <blockquote>
+          Emmanuel approaches software with an engineering mindset. He focuses on root causes, not quick fixes, and works to understand how each part of a system behaves under real conditions.
+          <br /><br />
+          In debugging, architecture, and delivery, he remains methodical and clear. He turns complex problems into structured plans and executes with consistency.
+          <br /><br />
+          He is defined by sound judgment, strong follow through, and a commitment to quality.
+        </blockquote>
+        <p class="quote-signoff">Observation about Emmanuel Rodriguez</p>
+      </article>
     </section>
 
     <section id="contact">
-        <p class="section__text__p1">Let’s connect</p>
-        <h1 class="title">Contact</h1>
-        <div class="contact-grid">
-            <div class="contact-card">
-                <p class="fact-label">Email</p>
-                <a href="mailto:erodriguez109@miners.utep.edu">erodriguez109@miners.utep.edu</a>
-            </div>
-            <div class="contact-card">
-                <p class="fact-label">Phone</p>
-                <a href="tel:+19152739971">(915) 273-9971</a>
-            </div>
-            <div class="contact-card">
-                <p class="fact-label">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/emmardz12" target="_blank" rel="noreferrer">linkedin.com/in/emmardz12</a>
-            </div>
+      <p class="section__text__p1">Let’s connect</p>
+      <h1 class="title">Contact</h1>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p class="fact-label">Email</p>
+          <a href="mailto:erodriguez109@miners.utep.edu">erodriguez109@miners.utep.edu</a>
         </div>
+
+        <div class="contact-card">
+          <p class="fact-label">Phone</p>
+          <a href="tel:+19152739971">(915) 273-9971</a>
+        </div>
+
+        <div class="contact-card">
+          <p class="fact-label">LinkedIn</p>
+          <a href="https://www.linkedin.com/in/emmardz12" target="_blank" rel="noopener noreferrer">linkedin.com/in/emmardz12</a>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>© <span id="current-year"></span> Emmanuel Rodriguez — Always learning, always iterating.</p>
-    </footer>
+  <footer>
+    <p>© <span id="current-year"></span> Emmanuel Rodriguez, always learning, always iterating.</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
