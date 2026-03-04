@@ -1,0 +1,83 @@
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    #profile,
+    .section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #profile {
+        gap: 2.5rem;
+    }
+
+    .section__pic-container {
+        max-width: 260px;
+    }
+
+    .profile-pic-frame {
+        width: 260px;
+        height: 260px;
+    }
+
+    .quick-facts {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .about-pic-wrapper {
+        max-width: 320px;
+    }
+
+    .about-pic {
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .projects-grid,
+    .skills-grid,
+    .experience-details-container,
+    .activities-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section__text {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    .title {
+        font-size: 2.1rem;
+    }
+
+    nav,
+    #hamburger-nav {
+        padding: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+}
